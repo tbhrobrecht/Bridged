@@ -55,6 +55,35 @@
             font-size: 1.1em;
             line-height: 1.6em;
         }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            font-size: 1.1em;
+            color: #333;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+        form input[type="submit"] {
+            background-color: #0056a6;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        form input[type="submit"]:hover {
+            background-color: #003f7d;
+        }
         footer {
             background-color: #0056a6;
             color: #fff;
@@ -83,11 +112,26 @@
         <div class="section">
             <h2>Get in Touch</h2>
             <p>
-                If you have any questions or would like to learn more about Bridged Tutoring Platform, feel free to reach out to us at:
+                If you have any questions, feel free to reach out to us by filling out the form below:
             </p>
-            <p>Email: support@bridgedtutoring.com</p>
-            <p>Phone: +123-456-7890</p>
-            <p>We look forward to hearing from you!</p>
+
+            <!-- Contact form -->
+            <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Your Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+
         </div>
 
     </div>
