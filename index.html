@@ -5,7 +5,7 @@
     <title>Bridged | Online Tutoring Platform</title>
     <style>
         body {
-            font-family: 'Arial, sans-serif';
+            font-family: 'Trebuchet MS', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f7f9fc;
@@ -14,33 +14,40 @@
         header {
             background-color: #0056a6;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            position: absolute;
-            top: 0;
-            right: 20px;
+            font-size: 2em;
         }
         nav a {
-            margin: 0 15px;
+            margin-left: 20px;
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1em;
         }
         nav a:hover {
             text-decoration: underline;
         }
-        .banner {
-            background-color: #ccc;
-            text-align: center;
-            padding: 100px 0;
-            font-size: 1.5em;
+        .parallax {
+            background-image: url('images/BC%20Bridge.jpg');
+            height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .container {
             max-width: 1200px;
@@ -54,14 +61,14 @@
             font-size: 2em;
             color: #000;
             position: relative;
-            margin-left: 80px;
+            padding-left: 80px;
         }
         .section h2::before {
             content: attr(data-number);
             font-size: 5em;
             color: #000;
             position: absolute;
-            left: -80px;
+            left: 0;
             top: 0;
         }
         .section p {
@@ -72,45 +79,60 @@
             background-color: #0056a6;
             color: #fff;
             text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 10px;
         }
         .footer-text {
             font-size: 0.9em;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            nav a {
+                margin-left: 10px;
+                font-size: 0.9em;
+            }
+            .section h2 {
+                font-size: 1.5em;
+            }
+            .section h2::before {
+                font-size: 3em;
+                left: 0;
+                top: 0;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Bridged | Online Tutoring Platform</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
-            <a href="#tutors">Tutors</a>
-            <a href="#registration">Registration</a>
-        </nav>
+        <div class="header-content">
+            <h1>Bridged | Online Tutoring Platform</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="#tutors">Tutors</a>
+                <a href="#registration">Registration</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="img">
-        <!-- Group Image of the Tutors in front of D Building TUM Logo -->
-        <img src="/workspaces/Bridged/images/BC Bridge.jpg" alt="BC Bridge">
-    </div>
+    <main>
+        <div class="parallax"></div>
 
-    <div class="container">
-        <div class="section" id="mission">
-            <h2 data-number="1">Mission Statement</h2>
-            <p>
-                Bridged believes in supporting students cross the academic gap rooted in systemic educational inequalities. Regardless of culture, language, and academic profile, we strive to provide all students with proper opportunities to achieve educational success.
-            </p>
+        <div class="container">
+            <section class="section" id="mission">
+                <h2 data-number="1">Mission Statement ü ö ä Ü Ö Ä ß</h2>
+                <p>
+                    Bridged believes in supporting students to cross the academic gap rooted in systemic educational inequalities. Regardless of culture, language, and academic profile, we strive to provide all students with proper opportunities to achieve educational success.
+                </p>
+            </section>
         </div>
-    </div>
+    </main>
 
     <footer>
         <p class="footer-text">
-            Bridged | A TUM Student Led Initiative to Bridging the Academic Threshold Together
+            Bridged | A TUM Student-Led Initiative to Bridge the Academic Threshold Together
         </p>
     </footer>
 
