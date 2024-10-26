@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'Bukra';
+    src: url('fonts/29ltbukrabolditalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bukra Light';
+    src: url('fonts/bukra-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p, h1 {
+    color: rgb(7, 33, 64); 
+}
+
+p {
+    line-height: 2;
+    font-weight: 800;
+}
+
+h1 {
+    line-height: 1.5;
+    font-weight: 1000;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+    background-color: rgb(240, 245, 250); 
+    background-image: linear-gradient(90deg, rgba(229, 235, 242) 1px, transparent 1px), 
+                      linear-gradient(rgba(229, 235, 242) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.title {
+    text-align: right;
+    padding-left: 10%;
+}
+
+.title h1 {
+    font-family: "Bukra";
+    margin: 0;
+    font-size: 48px;
+}
+
+.web-pages {
+    text-align: left;
+    padding-right: 10%;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    transition: box-shadow 0.3s ease;
+    display: inline-block;;
+    color: #003366;
+}
+
+nav a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.separator {
+    display: inline-block;
+    color: #003366;
+    font-family: "Bukra";
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(240, 245, 250); 
+    background-image: linear-gradient(90deg, rgba(229, 235, 242) 1px, transparent 1px), 
+                      linear-gradient(rgba(229, 235, 242) 1px, transparent 1px);
+    background-size: 50px 50px;
+    font-family: "Bukra Light";
+}
+
+.introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    flex: 0 0 40%; 
+    padding-top: 0%;
+    padding-right: 5%;
+    max-width: 40%;
+    margin-top: -10%;
+}
+
+.intro-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    flex: 0 0 40%; 
+    padding-right: 20px;
+}
+
+.intro-text p {
+    font-size: 1.2em;
+    padding-bottom: 5%;
+}
+
+.intro-image {
+    flex: 0 0 50%;
+    text-align: right;
+    transform: scale(1.25);
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.intro-button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px; 
+    font-family: "Bukra";
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    background-color: #003366; 
+    border: none;
+    border-radius: 10px; 
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 10px rgba(44, 24, 24, 0.2); 
+    width: 200px;
+}
+
+.intro-button:hover {
+    background-color: #002244; 
+    box-shadow: 0 8px 15px rgba(24, 60, 150, 0.3); 
+}
+
+
+.about-us-our-mission {
+    margin-top: 5%;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+.wave {
+    object-fit: cover; 
+    background-size: cover; 
+}
+
+.content-overlay {
+    position: relative; 
+    padding-top: 10%;
+    text-align: center;
+    color: #003366; 
+}
+
+.about-us {
+    position: relative; 
+}
+
+.about-us h1, .our-mission h1 {
+    position: relative;
+    bottom: -25px;
+    z-index: 1;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.about-us p, .our-mission p {
+    position: relative;
+    bottom: 175px;
+    left: -15%;
+    padding-left: 15%; 
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    z-index: 0;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    border: 2px solid rgb(0, 57, 142); 
+    max-width: 800px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.about-us img {
+    position: relative;
+    bottom: 250px;
+    left: -5%;
+    z-index: 2; 
+}
+
+footer {
+    background-color: #0056a6;
+    color: #fff;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer-text {
+    font-size: 1em;
+    font-family: "Bukra";
+}
+
+.clipart {
+    max-width: 75px; 
+    height: auto; 
+    margin: 20px; 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+}
+
+.clipart:hover {
+    transform: scale(1.1); 
+}

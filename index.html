@@ -2,138 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bridged | Online Tutoring Platform</title>
-    <style>
-        body {
-            font-family: 'Trebuchet MS', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f9fc;
-            color: #333;
-        }
-        header {
-            background-color: #0056a6;
-            color: #fff;
-            width: 100%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        nav a {
-            margin-left: 20px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1em;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .parallax {
-            background-image: url('images/BC%20Bridge.jpg');
-            height: 500px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        .section {
-            margin-bottom: 60px;
-        }
-        .section h2 {
-            font-size: 2em;
-            color: #000;
-            position: relative;
-            padding-left: 80px;
-        }
-        .section h2::before {
-            content: attr(data-number);
-            font-size: 5em;
-            color: #000;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-        .section p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #0056a6;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        .footer-text {
-            font-size: 0.9em;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-            nav a {
-                margin-left: 10px;
-                font-size: 0.9em;
-            }
-            .section h2 {
-                font-size: 1.5em;
-            }
-            .section h2::before {
-                font-size: 3em;
-                left: 0;
-                top: 0;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- <script src="main.js" defer></script>  -->
+
 </head>
 <body>
 
     <header>
-        <div class="header-content">
-            <h1>Bridged | Online Tutoring Platform</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <a href="#tutors">Tutors</a>
-                <a href="#registration">Registration</a>
-            </nav>
+        <div class="title">
+            <h1>Bridged</h1>
         </div>
+        <nav class="web-pages">
+            <a href="index.html">Home</a>
+            <span class="separator">|</span>
+            <a href="contact.html">Contact</a>
+            <span class="separator">|</span>
+            <a href="#tutors">Tutors</a>
+            <span class="separator">|</span>
+            <a href="#registration">Registration</a>
+        </nav>
     </header>
 
     <main>
-        <div class="parallax"></div>
+        <section class="introduction">
+            <div class="intro-text">
+                <h1>Hybrid Tutoring Platform</h1>
+                <p>Connect your child with TUM students for one-on-one tutoring in a variety of subjects, helping them excel academically while fostering a love for learning.</p>
+                <a href="#" class="intro-button">Join Now!</a>
+            </div>
+            <div class="intro-image">
+                <img src="images/woman sitting on books.svg" alt="Online Tutoring Image" />
+            </div>
+            <!-- <div>
+                <img src="images/cloud 1.svg" class="clipart" style="position: absolute; top: 20%; left: 50%;">
+                <img src="images/cloud 2.svg" class="clipart" style="float: right; max-width: 150px; margin-left: 20px;">
+                <img src="images/grade a.svg" class="clipart" style="float: right; max-width: 150px; margin-left: 20px;">
+            </div> -->
+        </section>
 
-        <div class="container">
-            <section class="section" id="mission">
-                <h2 data-number="1">Mission Statement ü ö ä Ü Ö Ä ß</h2>
-                <p>
-                    Bridged believes in supporting students to cross the academic gap rooted in systemic educational inequalities. Regardless of culture, language, and academic profile, we strive to provide all students with proper opportunities to achieve educational success.
-                </p>
-            </section>
-        </div>
+        <section class="about-us-our-mission">
+            <div class="background-wrapper">
+                <img src="images/wave bg.svg">
+            </div>
+            <div class="content-overlay">
+                <div class="about-us">
+                    <h1>About Us</h1>
+                    <div style="display: flex; align-items: center;">
+                        <img src="images/apple.png" style="margin-right: 10px; padding-left: 10%; z-index: 1">
+                        <p>Bridged is a non profit tutoring platform providing a digital plane
+                            where parents/guardians of elementary and secondary school
+                            students can reach out to TUM students to receive tutoring. The
+                            academic support provided is not strictly limited to German school
+                            related course subjects but also floods into the passions and
+                            interests of the tutors, which may be shared by the younger
+                            learners. As individuals engulfed in academia, we tutors wish to
+                            share that excitement with the next generation of young scholars.</p>
+                    </div>
+                </div>
+                <div class="our-mission">
+                    <h1>Our <strong>Mission</strong></h1>
+                    <p>Our mission is to provide a platform for TUM students to give back to the community by providing tutoring services to school students. We aim to bridge the academic threshold together.</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p class="footer-text">
-            Bridged | A TUM Student-Led Initiative to Bridge the Academic Threshold Together
-        </p>
+        <div class="footer-text">
+            Bridged | A TUM Student Led Initiative to Bridging the Academic Threshold Together 
+        </div>
     </footer>
 
 </body>
