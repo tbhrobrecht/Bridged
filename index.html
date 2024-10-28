@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridged</title>
+    <link rel="icon" href="logos/logo.svg">
     <link rel="stylesheet" href="main.css">
-    <!-- <script src="main.js" defer></script>  -->
+    <script src="main.js" defer></script> 
 
 </head>
 <body>
-
     <header>
-        <div class="title">
-            <h1>Bridged</h1>
+        <div class="header-container">
+            <div class="title">
+                <img src="logos/logo.svg" alt="Bridged Logo" class="logo">
+                <h1 style="margin-top: -20px;">ridged</h1>
+            </div>
+            <div class="dropdown">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="slide-menu" class="slide-menu">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
         <nav class="web-pages">
             <a href="index.html">Home</a>
@@ -30,7 +46,7 @@
             <div class="intro-text">
                 <h1>Hybrid Tutoring Platform</h1>
                 <p>Connect your child with TUM students for one-on-one tutoring in a variety of subjects, helping them excel academically while fostering a love for learning.</p>
-                <a href="#" class="intro-button">Join Now!</a>
+                <a href="https://forms.gle/BXFTyztmBxjq9ejVA" class="intro-button">Join Now!</a>
             </div>
             <div class="intro-image">
                 <img src="images/woman sitting on books.svg" alt="Online Tutoring Image" />
@@ -71,32 +87,33 @@
             </div>
         </section>
 
-        <section class="how-it-works">
+        <!-- <section class="how-it-works">
             <img src="images/boy head.svg" alt="Boy" class="how-it-works-image">
             <div class="corner-item center-item">
                 <h1 style="margin-left: -20px;">How It <br> Works</h1>
             </div>
-
             <div class="corner-item top-left" style="padding-top: 50px;">
                 <h2>Tutors</h2>
                 <p>Hand-Selected <br> TUM Students</p>
             </div>
-            
             <div class="corner-item top-right" style="padding-top: 70px; padding-right: 25px;">
                 <h2>Medium</h2>
                 <p>In-Person, Online <br> or Hybrid</p>
             </div>
-            
             <div class="corner-item bottom-left" style="padding-bottom: 0px; padding-left: 35px;">
                 <h2>Language</h2>
                 <p>Decided by the <br> student</p>
             </div>
-            
             <div class="corner-item bottom-right" style="margin-bottom: -15px; padding-right: 20px;">
                 <h2>Sign Up</h2>
                 <p>Enter Matchmaking <br> System</p>
             </div>
+        </section> -->
 
+        <section>
+            <div>
+                <img src="images/how it works.svg" alt="How It Works" class="how-it-works-image" style="padding: 5%;">
+            </div>
         </section>
 
         <section class="why-bridged">

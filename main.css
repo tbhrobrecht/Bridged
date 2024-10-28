@@ -26,9 +26,18 @@ h1 {
     font-weight: 1000;
 }
 
+body {
+    margin: 0;
+    background-color: rgb(240, 245, 250); 
+    background-image: linear-gradient(90deg, rgba(229, 235, 242) 1px, transparent 1px), 
+                      linear-gradient(rgba(229, 235, 242) 1px, transparent 1px);
+    background-size: 50px 50px;
+    font-family: "Bukra Light";
+}
+
+/* Header Styles */
 header {
     width: 100%;
-    padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -42,9 +51,28 @@ header {
     background-size: 50px 50px;
 }
 
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px; 
+}
+
+.logo {
+    width: 50px; 
+    height: auto;
+    vertical-align: middle;
+}
+
 .title {
-    text-align: right;
-    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-top: 2%;
+    margin-left: 10px; 
+    padding-left: 10%; 
 }
 
 .title h1 {
@@ -56,6 +84,11 @@ header {
 .web-pages {
     text-align: left;
     padding-right: 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
@@ -83,20 +116,87 @@ nav a:hover {
     vertical-align: middle;
 }
 
-nav {
+/* Position the hamburger icon to the far right */
+.dropdown {
+    display: none;
+}
+
+/* Show dropdown menu when hovering over button */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hamburger Icon Styles */
+.hamburger-icon {
+    width: 30px;
+    height: 25px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    display: block;
+    height: 4px;
+    background-color: #003366;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Ensure title and dropdown are aligned */
+.header-container {
+    display: flex;
+    justify-content: space-between; 
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 20px; 
+    
 }
 
-body {
-    margin: 0;
-    background-color: rgb(240, 245, 250); 
-    background-image: linear-gradient(90deg, rgba(229, 235, 242) 1px, transparent 1px), 
-                      linear-gradient(rgba(229, 235, 242) 1px, transparent 1px);
-    background-size: 50px 50px;
-    font-family: "Bukra Light";
+/* Prevent scrolling when no-scroll class is active */
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 
+/* Slide Menu Styles */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen */
+    width: 100%;
+    height: 100%;
+    background-color: #003366;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 1001; 
+    pointer-events: all; 
+}
+
+.slide-menu.active {
+    right: 0; 
+    pointer-events: all; 
+}
+
+.slide-menu a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.slide-menu a:hover {
+    background-color: #002244;
+}
+
+/* Introduction Section */
 .introduction {
     display: flex;
     justify-content: space-between;
@@ -130,18 +230,6 @@ body {
     padding-bottom: 5%;
 }
 
-.intro-image {
-    flex: 0 0 50%;
-    text-align: right;
-    transform: scale(1.25);
-}
-
-.intro-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
 .intro-button {
     display: block;
     margin: 20px auto;
@@ -165,7 +253,19 @@ body {
     box-shadow: 0 8px 15px rgba(24, 60, 150, 0.3); 
 }
 
+.intro-image {
+    flex: 0 0 50%;
+    text-align: right;
+    transform: scale(1.25);
+}
 
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About Us and Our Mission Section */
 .about-us-our-mission {
     position: relative; 
     overflow: hidden; 
@@ -202,7 +302,6 @@ body {
 
 .about-us-img {
     flex: 0 0 30%; 
-    position: flex;
     z-index: 1;
     width: 60%;
     max-width: 60%;
@@ -210,14 +309,12 @@ body {
 
 .about-us-text-wrapper {
     flex: 1; 
-    position: flex;
     margin-left: -10%;
 }
 
 .about-us-text-wrapper h1 {
     font-size: 86px; 
     color: #003366; 
-    position: flex;
     text-align: left; 
     padding-left: 20%;
     margin-bottom: -1%;
@@ -236,7 +333,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
-
 .our-mission-container {
     display: flex;
     align-items: center;
@@ -250,7 +346,6 @@ body {
 
 .our-mission-img {
     flex: 0 0 30%; 
-    position: flex;
     margin-left: -50%;
     padding-bottom: 20%;
     z-index: 1;
@@ -260,13 +355,11 @@ body {
 
 .our-mission-text-wrapper {
     flex: 1; 
-    position: flex;
 }
 
 .our-mission-text-wrapper h1 {
     font-size: 86px; 
     color: #003366; 
-    position: flex;
     text-align: left;
     margin-bottom: -1%; 
 }
@@ -285,6 +378,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
+/* How It Works Section */
 .how-it-works {
     position: relative;
     display: flex;
@@ -297,6 +391,16 @@ body {
     width: 80%;
     max-width: 80%; 
     margin: -5% auto 20px auto; 
+}
+
+.how-it-works-image {
+    align-items: center;
+    z-index: 1;
+}
+
+.how-it-works-image img {
+    max-width: 100%;
+    height: auto;
 }
 
 .corner-item {
@@ -359,78 +463,22 @@ body {
     font-family: "Bukra";
 }
 
-
-.how-it-works-text-image h1 {
-    font-size: 86px;
-    flex: 0 0 40%; 
-    z-index: 10;
-    text-align: center;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.how-it-works-text-image {
-    align-items: center;
-}
-
-.how-it-works-image {
-    align-items: center;
-    z-index: 1;
-}
-
-.how-it-works-text h2 {
-    font-size: 1.2em;
-    background: rgba(255, 255, 255, 0.8); 
-    border-radius: 10px; 
-    max-width: 90%; 
-    color: rgb(254, 255, 236);
-}
-
-.how-it-works-text p {
-    color: rgb(254, 255, 236);
-    font-size: 1.2em;
-    background: rgba(255, 255, 255, 0.8); 
-    border-radius: 10px; 
-    max-width: 90%; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-}
-
-.how-it-works-text {
-    margin-top: 20px;
-    color: rgb(254, 255, 236);
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8); 
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Why Bridged Section */
 .why-bridged {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 40px;
-    min-height: 100%;
-    height: 100%;
     width: 80%;
     max-width: 70%; 
     margin: -5% auto 20px auto; 
-}
-
-.why-bridged text {
-    color: rgb(254, 255, 236);
 }
 
 .why-bridged h1 {
     font-size: 86px;
     color: #003366; 
     margin-bottom: -1%;
-}
-
-.why-bridged h1 strong {
-    font-weight: 900
 }
 
 .why-bridged p {
@@ -455,6 +503,7 @@ body {
     border-radius: 10px;
 }
 
+/* Footer Styles */
 footer {
     background-color: #0056a6;
     color: #fff;
@@ -470,15 +519,205 @@ footer {
     font-family: "Bukra";
 }
 
-.clipart {
-    max-width: 75px; 
-    height: auto; 
-    margin: 20px; 
-    display: inline-block; 
-    transition: transform 0.3s ease; 
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* General font size adjustments */
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
 
-.clipart:hover {
-    transform: scale(1.1); 
-}
+    /* Header adjustments */
+    header {
+        flex-direction: column;
+        /* padding: 10px; */
+        padding-top: 20px;
+    }
 
+    .title {
+        justify-content: center; /* Center the title and logo */
+        padding-left: 0;
+    }
+
+    .logo {
+        width: 30px; /* Adjust the logo size for mobile */
+        padding-left: 10px;
+    }
+    .title h1 {
+        font-size: 2em;
+
+    }
+    .web-pages {
+        padding-right: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    nav a {
+        margin: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1em;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: box-shadow 0.3s ease;
+        display: inline-block;
+        color: #003366;
+    }
+    
+    .separator {
+        display: none;
+    }
+
+    .dropdown {
+        margin-left: auto; 
+        position: relative;
+        display: inline-block; 
+        position: absolute;
+        right: 20px; 
+    }
+
+    /* Hide the regular navigation bar */
+    nav {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: flex; 
+        padding-right: 20px; 
+    }
+
+    /* Introduction adjustments */
+    .introduction {
+        flex-direction: column;
+        padding: 20px;
+        padding-top: 80px; 
+    }
+    .intro-text {
+        max-width: 100%;
+        padding-right: 0;
+        text-align: center;
+        margin-top: 0;
+    }
+    .intro-text h1 {
+        font-size: 2em;
+    }
+    .intro-text p {
+        font-size: 1em;
+    }
+    .intro-button {
+        width: 80%;
+        max-width: 200px;
+        margin: 20px auto;
+    }
+    .intro-image {
+        max-width: 100%;
+        text-align: center;
+        transform: none;
+        margin-top: 20px;
+    }
+    .intro-image img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    /* About Us and Our Mission adjustments */
+    .about-us-container,
+    .our-mission-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .about-us-text-wrapper,
+    .our-mission-text-wrapper {
+        padding: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .about-us-text-wrapper h1,
+    .our-mission-text-wrapper h1 {
+        font-size: 2em;
+        padding-left: 0;
+    }
+    .about-us-text-wrapper p,
+    .our-mission-text-wrapper p {
+        padding: 20px;
+        width: auto;
+        max-width: 90%;
+    }
+    .about-us-img,
+    .our-mission-img {
+        max-width: 80%;
+        width: auto;
+        margin: 20px 0;
+    }
+
+    /* How It Works adjustments */
+    .how-it-works {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .how-it-works-image {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    .corner-item {
+        position: static;
+        width: auto;
+        max-width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+    .corner-item h2 {
+        font-size: 1.5em;
+    }
+    .corner-item p {
+        font-size: 1em;
+    }
+    .center-item {
+        position: static;
+        width: auto;
+        max-width: 100%;
+        margin: 10px 0;
+        transform: none;
+        text-align: center;
+    }
+    .center-item h1 {
+        font-size: 2em;
+    }
+
+    /* Why Bridged adjustments */
+    .why-bridged {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .why-bridged h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+    .why-bridged p {
+        padding: 20px;
+        width: auto;
+        max-width: 90%;
+        text-align: center;
+    }
+    .why-bridged img {
+        max-width: 80%;
+        margin: 20px 0;
+    }
+
+    .footer-text {
+        font-size: 1em;
+    }
+}
