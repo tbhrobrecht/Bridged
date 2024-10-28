@@ -224,7 +224,7 @@ body {
 }
 
 .about-us-text-wrapper p {
-    background: rgba(255, 255, 255, 0.8); 
+    background-color: #F5F5FA;
     padding-left: 20%;
     padding-right: 3%;
     padding-top: 3%;
@@ -272,7 +272,7 @@ body {
 }
 
 .our-mission-text-wrapper p {
-    background: rgba(255, 255, 255, 0.8); 
+    background-color: #F5F5FA;
     padding-left: 3%;
     padding-right: 20%;
     padding-top: 3%;
@@ -404,6 +404,55 @@ body {
     background: rgba(255, 255, 255, 0.8); 
     border-radius: 10px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.why-bridged {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    min-height: 100%;
+    height: 100%;
+    width: 80%;
+    max-width: 70%; 
+    margin: -5% auto 20px auto; 
+}
+
+.why-bridged text {
+    color: rgb(254, 255, 236);
+}
+
+.why-bridged h1 {
+    font-size: 86px;
+    color: #003366; 
+    margin-bottom: -1%;
+}
+
+.why-bridged h1 strong {
+    font-weight: 900
+}
+
+.why-bridged p {
+    background-color: #F5F5FA;
+    font-size: 1.2em;
+    padding-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 30px;
+    border-radius: 10px; 
+    text-align: center; 
+    max-width: 800px; 
+    border: 2px solid rgb(0, 57, 142); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-top: -40px;
+}
+
+.why-bridged img {
+    padding-top: 30px;
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
 }
 
 footer {
