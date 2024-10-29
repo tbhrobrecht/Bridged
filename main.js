@@ -1,16 +1,3 @@
-// document.addEventListener("scroll", function() {
-//     const mainContent = document.querySelector("main");
-//     const scrollPosition = window.scrollY;
-//     const fadeStart = 0; // Start fading out immediately
-//     const fadeEnd = 300; // Completely faded out at 300px scroll
-
-//     // Calculate opacity based on scroll position
-//     let opacity = 1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart);
-//     opacity = Math.max(opacity, 0); // Ensure opacity does not go below 0
-
-//     mainContent.style.opacity = opacity;
-// });
-
 function toggleMenu() {
     const menu = document.getElementById("slide-menu");
     const body = document.body;
@@ -36,5 +23,23 @@ document.addEventListener('click', function(event) {
         menu.classList.remove('active');
         document.body.classList.remove('no-scroll');
     }
+});
+
+let lastScrollPosition = 0;
+const header = document.querySelector('header');
+const headerHeight = header.offsetHeight; // Automatically get header height
+
+window.addEventListener('scroll', () => {
+    const currentScrollPosition = window.pageYOffset;
+
+    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > headerHeight) {
+        // User is scrolling down, hide the header
+        header.style.top = `-${headerHeight}px`; // Set to negative header height
+    } else if (currentScrollPosition < lastScrollPosition) {
+        // User is scrolling up, show the header
+        header.style.top = '0';
+    }
+
+    lastScrollPosition = currentScrollPosition;
 });
 

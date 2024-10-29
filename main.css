@@ -49,6 +49,7 @@ header {
     background-image: linear-gradient(90deg, rgba(229, 235, 242) 1px, transparent 1px), 
                       linear-gradient(rgba(229, 235, 242) 1px, transparent 1px);
     background-size: 50px 50px;
+    transition: top 0.3s ease; /* Smooth transition */
 }
 
 /* Header Container */
@@ -57,7 +58,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 10px 20px; 
+    padding-bottom: 10px; 
 }
 
 .logo {
@@ -151,7 +152,7 @@ nav a:hover {
     align-items: center;
     width: 100%;
     max-width: 100%;
-    padding: 10px 20px; 
+    /* padding: 10px 20px;  */
     
 }
 
@@ -533,11 +534,19 @@ footer {
     }
 
     /* Header adjustments */
-    header {
+    /* header {
         flex-direction: column;
-        /* padding: 10px; */
-        padding-top: 20px;
+    } */
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding-top: 10px;
+        transition: top 0.3s ease; /* Smooth transition for hiding and showing */
     }
+    
 
     .title {
         justify-content: center; /* Center the title and logo */
@@ -659,15 +668,16 @@ footer {
 
     /* How It Works adjustments */
     .how-it-works {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
-        padding: 20px;
+        /* padding: 20px; */
         width: 100%;
         margin: 0 auto;
     }
     .how-it-works-image {
-        max-width: 80%;
+        max-width: 100%;
         margin-bottom: 20px;
+        padding: 5%;
     }
     .corner-item {
         position: static;
